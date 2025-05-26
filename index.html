@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guia do TO</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Guia do TO</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="mostrarSecao('menu')">Menu</a></li>
+        <li><a href="#" onclick="mostrarSecao('avaliacoes')">Avaliações</a></li>
+        <li><a href="#" onclick="mostrarSecao('areas')">Áreas de Atuação</a></li>
+        <li><a href="#" onclick="mostrarSecao('anamnese')">Anamnese Infantil</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="menu"><h2>Menu Principal</h2></section>
+    <section id="avaliacoes" style="display:none;"><h2>Avaliações e Escalas</h2></section>
+    <section id="areas" style="display:none;"><h2>Áreas de Atuação</h2></section>
+    <section id="anamnese" style="display:none;">
+      <h2>Ficha de Anamnese Infantil</h2>
+      <form id="anamneseForm">
+        <label>Nome:<input type="text" name="nome" /></label><br><br>
+        <label>Idade:<input type="text" name="idade" /></label><br><br>
+        <label>Desenvolvimento Motor:<textarea name="desenvolvimento"></textarea></label><br><br>
+        <label>Equilíbrio:<textarea name="equilibrio"></textarea></label><br><br>
+        <label>Brincadeiras:<textarea name="brincadeiras"></textarea></label><br><br>
+        <button type="button" onclick="imprimirAnamnese()">Gerar PDF</button>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
